@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.4.3)
+  - EasyDi (1.6.1)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - EasyDi
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - EasyDi
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  EasyDi: 3d7d4c0d3ad2d78b3ff22d4755590d32945f69cc
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 994be9056cc09333ca89619cfe34389c496b1760
+
+COCOAPODS: 1.10.1

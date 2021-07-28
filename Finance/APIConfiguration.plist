@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>accessKey</key>
+	<dict>
+		<key>key</key>
+		<string>access_key</string>
+		<key>value</key>
+		<string>31355eb82908bd9d78700e5b3ba43ec6</string>
+	</dict>
+	<key>baseURL</key>
+	<string>http://api.marketstack.com/v1</string>
+</dict>
+</plist>
