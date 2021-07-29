@@ -47,11 +47,10 @@ public enum TabBarItem: String, CaseIterable {
         let controller: UIViewController
         switch self {
         case .first:
-            let service = ServicesAssembly.instance().marketstack
-            controller = TestViewController(viewModel: TestViewModel(marketstack: service))
+            controller = LoginViewController(viewModel: LoginViewModel())
             
         case .exchanges:
-            let parser = ServicesAssembly.instance().exchangeIdsParser
+            let parser = ApplicationAssembly.resolver.resolve(HandbookParser<ExchangeId>.self)!
             controller = ExchangesViewController(viewModel: ExchangesViewModel(handbookParser: parser))
             
         default:

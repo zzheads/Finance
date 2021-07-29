@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import EasyDi
+import Firebase
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let rootController = ApplicationAssembly.instance().tabBarController
+        let rootController = ApplicationAssembly.resolver.resolve(TabBarController.self)
+        
+        FirebaseApp.configure()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootController

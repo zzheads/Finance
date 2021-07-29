@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>474955689770-bd3ivegi0kgeadpjq3cmh65275655enq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.474955689770-bd3ivegi0kgeadpjq3cmh65275655enq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDDcDn61TcWqkZxi87yXk9FTDKPkjzCKsg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>474955689770</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>zzconcept.com.Finance</string>
+	<key>PROJECT_ID</key>
+	<string>finance-1dda2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>finance-1dda2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:474955689770:ios:23b45c4fc1fea065c23853</string>
+</dict>
+</plist>

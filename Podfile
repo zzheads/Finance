@@ -13,5 +13,7 @@ end
 target 'Finance' do
     pod 'Alamofire'
     pod 'SnapKit'
-    pod 'EasyDi'
+    pod 'Swinject'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
 end

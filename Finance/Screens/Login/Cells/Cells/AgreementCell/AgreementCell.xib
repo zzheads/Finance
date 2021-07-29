@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="107" id="v1t-vL-ghr" customClass="AgreementCell" customModule="Finance" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v1t-vL-ghr" id="U5h-BX-MnO">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iU9-uK-6dh">
+                        <rect key="frame" x="20" y="21.5" width="51" height="31"/>
+                        <color key="onTintColor" red="0.0" green="0.064506635270000001" blue="0.38610338179999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="thumbTintColor" systemColor="systemBlueColor"/>
+                    </switch>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PId-A7-jbg">
+                        <rect key="frame" x="89" y="12" width="305" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="eTo-tA-3PL"/>
+                        </constraints>
+                        <attributedString key="attributedText"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="PId-A7-jbg" secondAttribute="bottom" constant="12" id="0HS-aA-J4x"/>
+                    <constraint firstItem="PId-A7-jbg" firstAttribute="centerY" secondItem="iU9-uK-6dh" secondAttribute="centerY" id="NLo-cN-f0V"/>
+                    <constraint firstItem="PId-A7-jbg" firstAttribute="leading" secondItem="iU9-uK-6dh" secondAttribute="trailing" constant="20" id="Vam-lx-Nke"/>
+                    <constraint firstAttribute="trailing" secondItem="PId-A7-jbg" secondAttribute="trailing" constant="20" id="X4X-76-ewP"/>
+                    <constraint firstItem="iU9-uK-6dh" firstAttribute="leading" secondItem="U5h-BX-MnO" secondAttribute="leading" constant="20" id="nkv-uW-Ygd"/>
+                    <constraint firstItem="PId-A7-jbg" firstAttribute="top" secondItem="U5h-BX-MnO" secondAttribute="top" constant="12" id="sa6-eE-4YS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="switch" destination="iU9-uK-6dh" id="DId-vn-a2L"/>
+                <outlet property="textView" destination="PId-A7-jbg" id="u0n-QQ-bGo"/>
+                <outlet property="textViewHeightConstraint" destination="eTo-tA-3PL" id="eLu-XZ-zgq"/>
+            </connections>
+            <point key="canvasLocation" x="-342.02898550724638" y="128.90625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

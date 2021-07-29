@@ -17,7 +17,7 @@ public protocol ViewModel: AnyObject {
     func viewDidDisappear(_ animated: Bool)
 }
 
-public class BaseViewModel: ViewModel {
+public class BaseViewModel: NSObject, ViewModel {
     public func setup() {}
     public func viewDidLoad() {}
     public func didBindUI() {}
