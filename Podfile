@@ -16,4 +16,5 @@ target 'Finance' do
     pod 'Swinject'
     pod 'Firebase/Analytics'
     pod 'Firebase/Auth'
+    pod 'Nuke'
 end

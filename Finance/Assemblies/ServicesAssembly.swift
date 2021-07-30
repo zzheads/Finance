@@ -11,6 +11,7 @@ final class ServicesAssembly: Assembly {
     private enum Contstants {
         static let apiConfigurationFileName = "APIConfiguration"
         static let exchangesHandbookFileName = "ISO10383_MIC.csv"
+        static let userDefaultsDomain = "ru.mts.mtssearch"
     }
     
     func assemble(container: Container) {
@@ -35,6 +36,10 @@ final class ServicesAssembly: Assembly {
         container.register(MarketStackService.self) { resolver in
             let networkManager = resolver.resolve(NetworkManager.self)!
             return DefaultMarketStackService(networkManager: networkManager)
+        }.inObjectScope(.container)
+        
+        container.register(UserDefaultsStore.self) { _ in
+            DefaultUserDefaultsStore(suiteName: Contstants.userDefaultsDomain)!
         }.inObjectScope(.container)
     }
     

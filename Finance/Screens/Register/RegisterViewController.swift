@@ -1,28 +1,28 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  Finance
 //
-//  Created by Алексей Папин on 29.07.2021.
+//  Created by Алексей Папин on 30.07.2021.
 //
 
-import FirebaseAuth
 import SnapKit
 
-final class LoginViewController: BaseViewController<LoginViewModel> {
+// MARK: - RegisterViewController
+final class RegisterViewController: BaseViewController<RegisterViewModel> {
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.registerCells(ofRows: viewModel.rows)
-        tableView.dataSource = self
-        tableView.separatorStyle = .none
-        tableView.rowHeight = UITableView.automaticDimension
-        return tableView
+        let view = UITableView()
+        view.allowsSelection = false
+        view.separatorStyle = .none
+        view.dataSource = self
+        view.registerCells(ofRows: viewModel.rows)
+        view.rowHeight = UITableView.automaticDimension
+        return view
     }()
     
     override func setup() {
         super.setup()
         addSubviews()
         makeConstraints()
-        tableView.reloadData()
     }
     
     private func addSubviews() {
@@ -31,13 +31,12 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
     
     private func makeConstraints() {
         tableView.snp.makeConstraints {
-            $0.left.right.equalToSuperview()
-            $0.top.bottom.equalTo(view.safeAreaLayoutGuide)
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
 }
 
-extension LoginViewController: UITableViewDataSource {
+extension RegisterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.rows.count
     }
@@ -47,5 +46,11 @@ extension LoginViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseIdentifier, for: indexPath)
         row.configure(cell: cell)
         return cell
+    }
+}
+
+extension RegisterViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        viewModel.rows[indexPath.row].height
     }
 }

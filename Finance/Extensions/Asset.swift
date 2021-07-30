@@ -8,6 +8,10 @@
 import UIKit
 
 class Asset {
+    static func image<Enum: RawRepresentable>(_ value: Enum) -> UIImage where Enum.RawValue == String {
+        UIImage(imageLiteralResourceName: value.rawValue)
+    }
+
     enum Logo: String {
         case h_blackOnWhite = "horizontal_black_on_white_by_logaster"
         case h_onCorporate = "horizontal_on_corporate_by_logaster"
@@ -19,9 +23,9 @@ class Asset {
         case v_onNegative = "vertical_on_negative_by_logaster"
         case v_onTransparent = "vertical_on_transparent_by_logaster"
         case v_onWhite = "vertical_on_white_by_logaster"
-    }
-    
-    static func image<Enum: RawRepresentable>(_ value: Enum) -> UIImage where Enum.RawValue == String {
-        UIImage(imageLiteralResourceName: value.rawValue)
+        
+        var image: UIImage? {
+            return Asset.image(self)
+        }
     }
 }

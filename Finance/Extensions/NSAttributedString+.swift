@@ -7,15 +7,18 @@
 
 import Foundation
 
+// MARK: - LinkedStringModel
 extension NSAttributedString {
     struct LinkedStringModel {
         var string: String
         var url: URL?
     }
     
-    static func attributedString(of models: [LinkedStringModel],
-                                 normalAttributes: [NSAttributedString.Key: Any],
-                                 linkedAttributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
+    static func attributedString(
+        of models: [LinkedStringModel],
+        normalAttributes: [NSAttributedString.Key: Any],
+        linkedAttributes: [NSAttributedString.Key: Any]
+    ) -> NSAttributedString {
         let result = NSMutableAttributedString(string: "", attributes: nil)
         for model in models {
             if let url = model.url {
@@ -31,5 +34,10 @@ extension NSAttributedString {
             }
         }
         return result
-    }        
+    }
+    
+    convenience init?(optString: String?, attributes: [NSAttributedString.Key: Any]) {
+        guard let string = optString else { return nil }
+        self.init(string: string, attributes: attributes)
+    }
 }

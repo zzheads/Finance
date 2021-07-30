@@ -14,6 +14,7 @@ final class ApplicationAssembly: Assembly {
         let assembler = Assembler(container: container)
         assembler.apply(assemblies: [
             ServicesAssembly(),
+            FirebaseAssembly(),
             ApplicationAssembly(),
         ])
         return assembler.resolver

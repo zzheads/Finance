@@ -1,0 +1,7 @@
+Finance.xcodeproj/xcuserdata/zzheads.xcuserdatad/xcschemes/xcschememanagement.plist
+*.xcbkptlist
+Pods/Nuke
+Pods/Pods.xcodeproj
+Pods/Target Support Files
+Pods/Manifest.lock
+Podfile.lock

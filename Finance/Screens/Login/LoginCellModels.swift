@@ -57,7 +57,7 @@ struct LoginCellModels {
             
         return .init(
             buttonModel: buttonModel,
-            edges: nil,
+            insets: .zero,
             tapHandler: handler
         )
     }

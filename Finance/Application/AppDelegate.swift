@@ -15,9 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let rootController = ApplicationAssembly.resolver.resolve(TabBarController.self)
-        
-        FirebaseApp.configure()
+        let auth: Auth = ApplicationAssembly.resolver.resolve()
+        let rootController = RegisterViewController(viewModel: RegisterViewModel(auth: auth))
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootController

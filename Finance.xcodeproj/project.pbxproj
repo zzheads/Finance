@@ -20,7 +20,7 @@
 		A60508E726B17F1700C6C31B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60508E626B17F1700C6C31B /* APIError.swift */; };
 		A654577726B3116F00BEFF08 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654577626B3116F00BEFF08 /* LoginViewModel.swift */; };
 		A654577926B3117C00BEFF08 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654577826B3117C00BEFF08 /* LoginViewController.swift */; };
-		A654577D26B314D600BEFF08 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654577C26B314D600BEFF08 /* Configurable.swift */; };
+		A654577D26B314D600BEFF08 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654577C26B314D600BEFF08 /* ConfigurableCell.swift */; };
 		A654578626B3163B00BEFF08 /* MTSSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A654578126B3163B00BEFF08 /* MTSSans-Black.otf */; };
 		A654578726B3163B00BEFF08 /* MTSSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A654578226B3163B00BEFF08 /* MTSSans-Medium.otf */; };
 		A654578826B3163B00BEFF08 /* MTSSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A654578326B3163B00BEFF08 /* MTSSans-Bold.otf */; };
@@ -41,7 +41,6 @@
 		A65457DD26B3192400BEFF08 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65457DB26B3192400BEFF08 /* TextField.swift */; };
 		A65457DF26B31A9900BEFF08 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65457DE26B31A9900BEFF08 /* UIView+.swift */; };
 		A65457ED26B32BD200BEFF08 /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65457E126B32BD200BEFF08 /* LogoView.xib */; };
-		A65457EE26B32BD200BEFF08 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65457E226B32BD200BEFF08 /* ButtonCell.xib */; };
 		A65457EF26B32BD200BEFF08 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65457E326B32BD200BEFF08 /* EmptyCell.swift */; };
 		A65457F026B32BD200BEFF08 /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65457E426B32BD200BEFF08 /* EmptyCell.xib */; };
 		A65457F126B32BD200BEFF08 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65457E526B32BD200BEFF08 /* SwitchCell.xib */; };
@@ -73,6 +72,16 @@
 		A65BD98826B07E9C009DD689 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BD98726B07E9C009DD689 /* TestViewController.swift */; };
 		A65BD98B26B07F2F009DD689 /* MarketstackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BD98A26B07F2F009DD689 /* MarketstackService.swift */; };
 		A65BD98D26B08228009DD689 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BD98C26B08228009DD689 /* ServicesAssembly.swift */; };
+		A66FCD5426B3CF60006B2917 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD5326B3CF60006B2917 /* RegisterViewModel.swift */; };
+		A66FCD5626B3CF6D006B2917 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD5526B3CF6D006B2917 /* RegisterViewController.swift */; };
+		A66FCD5926B3D0E1006B2917 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD5826B3D0E1006B2917 /* ImageCell.swift */; };
+		A66FCD5B26B3D2C3006B2917 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD5A26B3D2C3006B2917 /* UIImageView+.swift */; };
+		A66FCD5D26B3D400006B2917 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD5C26B3D400006B2917 /* ConfigurableView.swift */; };
+		A66FCD5F26B3D447006B2917 /* ConfigurableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD5E26B3D447006B2917 /* ConfigurableRow.swift */; };
+		A66FCD6326B3E71A006B2917 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6226B3E71A006B2917 /* UITableView+.swift */; };
+		A66FCD6626B3E902006B2917 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6526B3E902006B2917 /* UserDefaults.swift */; };
+		A66FCD6A26B3FB63006B2917 /* FirebaseAssemblies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6926B3FB63006B2917 /* FirebaseAssemblies.swift */; };
+		A66FCD6C26B3FBFD006B2917 /* Resolver+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6B26B3FBFD006B2917 /* Resolver+.swift */; };
 		ECBDFC1503F101461163FFCA /* Pods_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE642A8459F8E638C85BFD1 /* Pods_Finance.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +102,7 @@
 		A60508E626B17F1700C6C31B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		A654577626B3116F00BEFF08 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A654577826B3117C00BEFF08 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A654577C26B314D600BEFF08 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		A654577C26B314D600BEFF08 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		A654578126B3163B00BEFF08 /* MTSSans-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MTSSans-Black.otf"; sourceTree = "<group>"; };
 		A654578226B3163B00BEFF08 /* MTSSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MTSSans-Medium.otf"; sourceTree = "<group>"; };
 		A654578326B3163B00BEFF08 /* MTSSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MTSSans-Bold.otf"; sourceTree = "<group>"; };
@@ -114,7 +123,6 @@
 		A65457DB26B3192400BEFF08 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		A65457DE26B31A9900BEFF08 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A65457E126B32BD200BEFF08 /* LogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
-		A65457E226B32BD200BEFF08 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		A65457E326B32BD200BEFF08 /* EmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		A65457E426B32BD200BEFF08 /* EmptyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		A65457E526B32BD200BEFF08 /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
@@ -148,6 +156,16 @@
 		A65BD98726B07E9C009DD689 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A65BD98A26B07F2F009DD689 /* MarketstackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketstackService.swift; sourceTree = "<group>"; };
 		A65BD98C26B08228009DD689 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		A66FCD5326B3CF60006B2917 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		A66FCD5526B3CF6D006B2917 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A66FCD5826B3D0E1006B2917 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		A66FCD5A26B3D2C3006B2917 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		A66FCD5C26B3D400006B2917 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		A66FCD5E26B3D447006B2917 /* ConfigurableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableRow.swift; sourceTree = "<group>"; };
+		A66FCD6226B3E71A006B2917 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		A66FCD6526B3E902006B2917 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		A66FCD6926B3FB63006B2917 /* FirebaseAssemblies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAssemblies.swift; sourceTree = "<group>"; };
+		A66FCD6B26B3FBFD006B2917 /* Resolver+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +263,9 @@
 		A654577B26B314C400BEFF08 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A654577C26B314D600BEFF08 /* Configurable.swift */,
+				A654577C26B314D600BEFF08 /* ConfigurableCell.swift */,
+				A66FCD5C26B3D400006B2917 /* ConfigurableView.swift */,
+				A66FCD5E26B3D447006B2917 /* ConfigurableRow.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -275,6 +295,9 @@
 				A654579126B317DE00BEFF08 /* UILabel+.swift */,
 				A654579226B317DE00BEFF08 /* UITextView+.swift */,
 				A65457DE26B31A9900BEFF08 /* UIView+.swift */,
+				A66FCD5A26B3D2C3006B2917 /* UIImageView+.swift */,
+				A66FCD6226B3E71A006B2917 /* UITableView+.swift */,
+				A66FCD6B26B3FBFD006B2917 /* Resolver+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +315,7 @@
 		A65457E026B32BD200BEFF08 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A66FCD5726B3D0D0006B2917 /* ImageCell */,
 				A654580026B3330800BEFF08 /* AgreementCell */,
 				A65457FF26B332FD00BEFF08 /* SwitchCell */,
 				A65457FE26B332E900BEFF08 /* EmptyCell */,
@@ -323,7 +347,6 @@
 		A65457FD26B332DE00BEFF08 /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
-				A65457E226B32BD200BEFF08 /* ButtonCell.xib */,
 				A65457E926B32BD200BEFF08 /* ButtonCell.swift */,
 			);
 			path = ButtonCell;
@@ -377,6 +400,7 @@
 		A65BD94926AFF402009DD689 /* Finance */ = {
 			isa = PBXGroup;
 			children = (
+				A66FCD6426B3E8DE006B2917 /* UserDefaults */,
 				A654578D26B317B400BEFF08 /* Extensions */,
 				A654577B26B314C400BEFF08 /* Protocols */,
 				A60508DA26B144AD00C6C31B /* HandbookParser */,
@@ -442,6 +466,7 @@
 			children = (
 				A65BD96F26B004E9009DD689 /* ApplicationAssembly.swift */,
 				A65BD98C26B08228009DD689 /* ServicesAssembly.swift */,
+				A66FCD6926B3FB63006B2917 /* FirebaseAssemblies.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -477,6 +502,7 @@
 		A65BD98426B07E5A009DD689 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A66FCD5226B3CF4B006B2917 /* Register */,
 				A654577526B3114600BEFF08 /* Login */,
 				A60508DF26B15AC300C6C31B /* Exchanges */,
 				A65BD98526B07E7F009DD689 /* TestViewModel.swift */,
@@ -494,6 +520,31 @@
 				A60508CB26B1235500C6C31B /* MerketstackServiceError.swift */,
 			);
 			path = MarketstackService;
+			sourceTree = "<group>";
+		};
+		A66FCD5226B3CF4B006B2917 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A66FCD5326B3CF60006B2917 /* RegisterViewModel.swift */,
+				A66FCD5526B3CF6D006B2917 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A66FCD5726B3D0D0006B2917 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				A66FCD5826B3D0E1006B2917 /* ImageCell.swift */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		A66FCD6426B3E8DE006B2917 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				A66FCD6526B3E902006B2917 /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,7 +608,6 @@
 			files = (
 				A654578726B3163B00BEFF08 /* MTSSans-Medium.otf in Resources */,
 				A60508D926B1448800C6C31B /* ISO10383_MIC.csv in Resources */,
-				A65457EE26B32BD200BEFF08 /* ButtonCell.xib in Resources */,
 				A654578C26B3175000BEFF08 /* Colors.xcassets in Resources */,
 				A65BD97E26B0548A009DD689 /* APIConfiguration.plist in Resources */,
 				A654D0B126B2E249007ED373 /* GoogleService-Info.plist in Resources */,
@@ -623,9 +673,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66FCD6626B3E902006B2917 /* UserDefaults.swift in Sources */,
 				A65BD97526B00A00009DD689 /* TabBarViewModel.swift in Sources */,
 				A65457A126B317DE00BEFF08 /* UIColor+LevelUp.swift in Sources */,
 				A65BD96926AFFBA8009DD689 /* Router.swift in Sources */,
+				A66FCD6A26B3FB63006B2917 /* FirebaseAssemblies.swift in Sources */,
 				A65BD98826B07E9C009DD689 /* TestViewController.swift in Sources */,
 				A65BD98D26B08228009DD689 /* ServicesAssembly.swift in Sources */,
 				A65BD97726B00A48009DD689 /* TabBarItem.swift in Sources */,
@@ -636,16 +688,19 @@
 				A65457F826B32BD200BEFF08 /* SwitchCell.swift in Sources */,
 				A65BD97A26B03EE0009DD689 /* NetworkManager.swift in Sources */,
 				A654579B26B317DE00BEFF08 /* UIAlertController+.swift in Sources */,
+				A66FCD6C26B3FBFD006B2917 /* Resolver+.swift in Sources */,
 				A65BD97326B009BB009DD689 /* TabBarController.swift in Sources */,
 				A65BD97026B004E9009DD689 /* ApplicationAssembly.swift in Sources */,
 				A60508DE26B1498200C6C31B /* ExchangeId.swift in Sources */,
 				A654579A26B317DE00BEFF08 /* Font.swift in Sources */,
-				A654577D26B314D600BEFF08 /* Configurable.swift in Sources */,
+				A66FCD5F26B3D447006B2917 /* ConfigurableRow.swift in Sources */,
+				A654577D26B314D600BEFF08 /* ConfigurableCell.swift in Sources */,
 				A65457EF26B32BD200BEFF08 /* EmptyCell.swift in Sources */,
 				A60508DC26B144D700C6C31B /* HandbookParser.swift in Sources */,
 				A65BD96D26AFFD39009DD689 /* Coordinator.swift in Sources */,
 				A65BD98326B059FF009DD689 /* APIConfigurationParser.swift in Sources */,
 				A654579C26B317DE00BEFF08 /* UILabel+.swift in Sources */,
+				A66FCD5626B3CF6D006B2917 /* RegisterViewController.swift in Sources */,
 				A65BD96226AFF644009DD689 /* ViewModel.swift in Sources */,
 				A65457F526B32BD200BEFF08 /* ButtonCell.swift in Sources */,
 				A65457A226B317DE00BEFF08 /* UIColor+Hex.swift in Sources */,
@@ -654,18 +709,23 @@
 				A65BD98B26B07F2F009DD689 /* MarketstackService.swift in Sources */,
 				A60508D126B12A8400C6C31B /* EODRequest.swift in Sources */,
 				A654579D26B317DE00BEFF08 /* UITextView+.swift in Sources */,
+				A66FCD6326B3E71A006B2917 /* UITableView+.swift in Sources */,
 				A654577926B3117C00BEFF08 /* LoginViewController.swift in Sources */,
 				A654579F26B317DE00BEFF08 /* NSAttributedString+.swift in Sources */,
 				A60508E526B15B8100C6C31B /* ExchangeIdCell.swift in Sources */,
+				A66FCD5926B3D0E1006B2917 /* ImageCell.swift in Sources */,
+				A66FCD5B26B3D2C3006B2917 /* UIImageView+.swift in Sources */,
 				A65BD97C26B040A2009DD689 /* NetworkRequest.swift in Sources */,
 				A65457F326B32BD200BEFF08 /* TextFieldCell.swift in Sources */,
 				A60508D626B13F2D00C6C31B /* Page.swift in Sources */,
+				A66FCD5D26B3D400006B2917 /* ConfigurableView.swift in Sources */,
 				A654579E26B317DE00BEFF08 /* Asset.swift in Sources */,
 				A654577726B3116F00BEFF08 /* LoginViewModel.swift in Sources */,
 				A60508E726B17F1700C6C31B /* APIError.swift in Sources */,
 				A65457F226B32BD200BEFF08 /* AgreementCell.swift in Sources */,
 				A65BD98626B07E7F009DD689 /* TestViewModel.swift in Sources */,
 				A65BD98126B0557E009DD689 /* PlistParser.swift in Sources */,
+				A66FCD5426B3CF60006B2917 /* RegisterViewModel.swift in Sources */,
 				A65457FA26B32DE700BEFF08 /* LoginCellModels.swift in Sources */,
 				A65BD94B26AFF402009DD689 /* AppDelegate.swift in Sources */,
 				A60508CE26B1296500C6C31B /* EODData.swift in Sources */,
