@@ -82,6 +82,7 @@
 		A66FCD6A26B3FB63006B2917 /* FirebaseAssemblies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6926B3FB63006B2917 /* FirebaseAssemblies.swift */; };
 		A66FCD6C26B3FBFD006B2917 /* Resolver+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6B26B3FBFD006B2917 /* Resolver+.swift */; };
 		E5B227EA26B6965400272758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5B227E926B6965400272758 /* Assets.xcassets */; };
+		E5B227ED26B730AF00272758 /* RowsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227EC26B730AF00272758 /* RowsBuilder.swift */; };
 		ECBDFC1503F101461163FFCA /* Pods_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE642A8459F8E638C85BFD1 /* Pods_Finance.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		A66FCD6926B3FB63006B2917 /* FirebaseAssemblies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAssemblies.swift; sourceTree = "<group>"; };
 		A66FCD6B26B3FBFD006B2917 /* Resolver+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+.swift"; sourceTree = "<group>"; };
 		E5B227E926B6965400272758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../IdealInvestor/IdealInvestor/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		E5B227EC26B730AF00272758 /* RowsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +504,7 @@
 		A65BD98426B07E5A009DD689 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E5B227EB26B7303E00272758 /* RowsBuilder */,
 				A66FCD5226B3CF4B006B2917 /* Register */,
 				A654577526B3114600BEFF08 /* Login */,
 				A60508DF26B15AC300C6C31B /* Exchanges */,
@@ -545,6 +548,14 @@
 				A66FCD6526B3E902006B2917 /* UserDefaults.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		E5B227EB26B7303E00272758 /* RowsBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				E5B227EC26B730AF00272758 /* RowsBuilder.swift */,
+			);
+			path = RowsBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -681,6 +692,7 @@
 				A65BD98826B07E9C009DD689 /* TestViewController.swift in Sources */,
 				A65BD98D26B08228009DD689 /* ServicesAssembly.swift in Sources */,
 				A65BD97726B00A48009DD689 /* TabBarItem.swift in Sources */,
+				E5B227ED26B730AF00272758 /* RowsBuilder.swift in Sources */,
 				A60508E326B15B4B00C6C31B /* ExchangesViewController.swift in Sources */,
 				A65BD96626AFF69F009DD689 /* ViewController.swift in Sources */,
 				A65457DF26B31A9900BEFF08 /* UIView+.swift in Sources */,

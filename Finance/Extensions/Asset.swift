@@ -24,7 +24,7 @@ class Asset {
         case v_onTransparent = "vertical_on_transparent_by_logaster"
         case v_onWhite = "vertical_on_white_by_logaster"
         
-        var image: UIImage? {
+        var image: UIImage {
             return Asset.image(self)
         }
     }

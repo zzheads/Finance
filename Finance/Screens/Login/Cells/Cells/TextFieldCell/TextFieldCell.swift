@@ -7,6 +7,8 @@
 
 import SnapKit
 
+typealias TextFieldRow = Row<TextFieldCell, TextFieldCell.Model>
+
 class TextFieldCell: UITableViewCell {
     private struct Constants {
         static func attributed(title: String?) -> NSAttributedString? {
