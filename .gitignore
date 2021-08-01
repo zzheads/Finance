@@ -5,3 +5,15 @@ Pods/Pods.xcodeproj
 Pods/Target Support Files
 Pods/Manifest.lock
 Podfile.lock
+*.xcuserstate
+Pods/Firebase
+Pods/FirebaseAuth
+Pods/FirebaseAnalytics
+Pods/FirebaseCore
+Pods/FirebaseCoreDiagnostics
+Pods/FirebaseInstallations
+Pods/GoogleAppMeasurement
+Pods/GoogleDataTransport
+Pods/PromisesObjC
+Pods/GoogleUtilities
+Finance.xcodeproj/xcuserdata/avpapin1.xcuserdatad/xcschemes/xcschememanagement.plist

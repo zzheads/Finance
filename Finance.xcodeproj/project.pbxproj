@@ -37,7 +37,6 @@
 		A65457A026B317DE00BEFF08 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654579626B317DE00BEFF08 /* UIColor+Extension.swift */; };
 		A65457A126B317DE00BEFF08 /* UIColor+LevelUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654579726B317DE00BEFF08 /* UIColor+LevelUp.swift */; };
 		A65457A226B317DE00BEFF08 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654579826B317DE00BEFF08 /* UIColor+Hex.swift */; };
-		A65457D926B3183300BEFF08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65457D826B3183300BEFF08 /* Assets.xcassets */; };
 		A65457DD26B3192400BEFF08 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65457DB26B3192400BEFF08 /* TextField.swift */; };
 		A65457DF26B31A9900BEFF08 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65457DE26B31A9900BEFF08 /* UIView+.swift */; };
 		A65457ED26B32BD200BEFF08 /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65457E126B32BD200BEFF08 /* LogoView.xib */; };
@@ -82,6 +81,7 @@
 		A66FCD6626B3E902006B2917 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6526B3E902006B2917 /* UserDefaults.swift */; };
 		A66FCD6A26B3FB63006B2917 /* FirebaseAssemblies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6926B3FB63006B2917 /* FirebaseAssemblies.swift */; };
 		A66FCD6C26B3FBFD006B2917 /* Resolver+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66FCD6B26B3FBFD006B2917 /* Resolver+.swift */; };
+		E5B227E826B597EB00272758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5B227E726B597EB00272758 /* Assets.xcassets */; };
 		ECBDFC1503F101461163FFCA /* Pods_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE642A8459F8E638C85BFD1 /* Pods_Finance.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,7 +119,6 @@
 		A654579626B317DE00BEFF08 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A654579726B317DE00BEFF08 /* UIColor+LevelUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+LevelUp.swift"; sourceTree = "<group>"; };
 		A654579826B317DE00BEFF08 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		A65457D826B3183300BEFF08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../IdealInvestor/IdealInvestor/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		A65457DB26B3192400BEFF08 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		A65457DE26B31A9900BEFF08 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A65457E126B32BD200BEFF08 /* LogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
@@ -166,6 +165,7 @@
 		A66FCD6526B3E902006B2917 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		A66FCD6926B3FB63006B2917 /* FirebaseAssemblies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAssemblies.swift; sourceTree = "<group>"; };
 		A66FCD6B26B3FBFD006B2917 /* Resolver+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+.swift"; sourceTree = "<group>"; };
+		E5B227E726B597EB00272758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,8 +437,8 @@
 				A654578026B3163B00BEFF08 /* Font */,
 				A60508D726B1440F00C6C31B /* Handbook */,
 				A65BD95526AFF403009DD689 /* LaunchScreen.storyboard */,
-				A65457D826B3183300BEFF08 /* Assets.xcassets */,
 				A654578B26B3175000BEFF08 /* Colors.xcassets */,
+				E5B227E726B597EB00272758 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -618,8 +618,8 @@
 				A65457F026B32BD200BEFF08 /* EmptyCell.xib in Resources */,
 				A654578926B3163B00BEFF08 /* MTSSans-Regular.otf in Resources */,
 				A654578826B3163B00BEFF08 /* MTSSans-Bold.otf in Resources */,
-				A65457D926B3183300BEFF08 /* Assets.xcassets in Resources */,
 				A654578626B3163B00BEFF08 /* MTSSans-Black.otf in Resources */,
+				E5B227E826B597EB00272758 /* Assets.xcassets in Resources */,
 				A65457F126B32BD200BEFF08 /* SwitchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
