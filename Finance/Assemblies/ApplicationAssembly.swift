@@ -15,6 +15,7 @@ final class ApplicationAssembly: Assembly {
         assembler.apply(assemblies: [
             ServicesAssembly(),
             FirebaseAssembly(),
+            BuildersAssembly(),
             ApplicationAssembly(),
         ])
         return assembler.resolver

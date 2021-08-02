@@ -7,12 +7,30 @@
 
 import UIKit
 
+enum RowType {
+    case logo
+    case button(DefaultRowsBuilder.Title, UIButton.Appearance, (() -> Void)?)
+    case textField(DefaultRowsBuilder.Title, String?, ((String?) -> Void)?)
+}
+
 protocol RowsBuilder: AnyObject {
-    func logoRow() -> ImageRow
-    func buttonRow(title: DefaultRowsBuilder.Title, appearance: UIButton.Appearance, handler: (() -> Void)?) -> ButtonRow
+    func build(_ rows: RowType...) -> [ConfigurableRow]
     
-    func textFieldRow(title: DefaultRowsBuilder.Title, initialValue: String?, handler: ((String?) -> Void)?) -> TextFieldRow
-    func textFieldRow(title: DefaultRowsBuilder.Title, handler: ((String?) -> Void)?) -> TextFieldRow
+    func logoRow() -> ImageRow
+    
+    func buttonRow(
+        title: DefaultRowsBuilder.Title,
+        appearance: UIButton.Appearance,
+        handler: (() -> Void)?) -> ButtonRow
+    
+    func textFieldRow(
+        title: DefaultRowsBuilder.Title,
+        initialValue: String?,
+        handler: ((String?) -> Void)?) -> TextFieldRow
+    
+    func textFieldRow(
+        title: DefaultRowsBuilder.Title,
+        handler: ((String?) -> Void)?) -> TextFieldRow
 }
 
 extension RowsBuilder {
@@ -76,6 +94,31 @@ final class DefaultRowsBuilder {
 }
 
 extension DefaultRowsBuilder: RowsBuilder {
+    func build(_ rows: RowType...) -> [ConfigurableRow] {
+        var result: [ConfigurableRow] = []
+        for row in rows {
+            let newRow: ConfigurableRow
+            switch row {
+            case .logo:
+                newRow = logoRow()
+            case let .button(title, appearance, handler):
+                newRow = buttonRow(
+                    title: title,
+                    appearance: appearance,
+                    handler: handler
+                )
+            case let .textField(title, value, handler):
+                newRow = textFieldRow(
+                    title: title,
+                    initialValue: value,
+                    handler: handler
+                )
+            }
+            result.append(newRow)
+        }
+        return result
+    }
+    
     func logoRow() -> ImageRow {
         return ImageRow(
             ImageCell.Model(

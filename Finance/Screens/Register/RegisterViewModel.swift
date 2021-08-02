@@ -9,17 +9,19 @@ import FirebaseAuth
 
 final class RegisterViewModel: BaseViewModel {
 
-    private let rowsBuilder: RowsBuilder = DefaultRowsBuilder()
+    private let rowsBuilder: RowsBuilder
     private let auth: Auth
-    lazy var rows: [ConfigurableRow] = [
-        rowsBuilder.logoRow(),
-        rowsBuilder.textFieldRow(title: .email) { _ in },
-        rowsBuilder.textFieldRow(title: .password) { _ in },
-        rowsBuilder.buttonRow(title: .register, appearance: .blue) { }
-    ]
     
-    init(auth: Auth) {
+    lazy var rows: [ConfigurableRow] = rowsBuilder.build(
+        .logo,
+        .textField(.email, nil, nil),
+        .textField(.password, nil, nil),
+        .button(.register, .green, nil)
+    )
+    
+    init(auth: Auth, builder: RowsBuilder) {
         self.auth = auth
+        self.rowsBuilder = builder
     }
     
     override func viewWillAppear(_ animated: Bool) {

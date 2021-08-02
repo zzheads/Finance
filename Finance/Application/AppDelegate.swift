@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let auth: Auth = ApplicationAssembly.resolver.resolve()
-        let rootController = RegisterViewController(viewModel: RegisterViewModel(auth: auth))
+        let builder: RowsBuilder = ApplicationAssembly.resolver.resolve()
+        let model = RegisterViewModel(auth: auth, builder: builder)
+        let rootController = RegisterViewController(viewModel: model)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootController
