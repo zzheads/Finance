@@ -27,7 +27,7 @@ extension UIFont.Weight: CustomStringConvertible {
 extension UIFont {
     static let mtsFontName = "MTSSans"
     
-    static func mts(size: CGFloat, weight: UIFont.Weight) -> UIFont {
+    static func mts(size: CGFloat, weight: UIFont.Weight = .regular) -> UIFont {
         let name = [mtsFontName, weight.description].joined(separator: "-")
         return UIFont(name: name, size: size)!
     }

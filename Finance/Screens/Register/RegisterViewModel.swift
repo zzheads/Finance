@@ -8,43 +8,14 @@
 import FirebaseAuth
 
 final class RegisterViewModel: BaseViewModel {
-    private struct Appearance {
-        private let logoHeight: CGFloat = 200
-        private let logoImage: UIImage = Asset.Logo.h_blackOnWhite.image
-        private let logoContentMode: UIImageView.ContentMode = .scaleAspectFit
-        
-        private let buttonTitle: String = "Register"
-        private let buttonAppearance: UIButton.Appearance = .green
-        private let buttonInsets: UIEdgeInsets = .init(top: 0, left: 20, bottom: 0, right: 20)
-        
-        func logoRow() -> ImageRow {
-            .init(ImageCell.Model(
-                    height: logoHeight,
-                    image: logoImage,
-                    contentMode: logoContentMode)
-            )
-        }
-        
-        func buttonRow(withHandler handler: (() -> Void)?) -> ButtonRow {
-            let buttonModel = UIButton.Model(
-                title: buttonTitle,
-                appearance: buttonAppearance
-            )
-            return .init(ButtonCell.Model(
-                            buttonModel: buttonModel,
-                            insets: buttonInsets,
-                            tapHandler: handler)
-            )
-        }
-        
-        
-    }
-    
+
+    private let rowsBuilder: RowsBuilder = DefaultRowsBuilder()
     private let auth: Auth
-    private let appearance = Appearance()
     lazy var rows: [ConfigurableRow] = [
-        appearance.logoRow(),
-        appearance.buttonRow(withHandler: nil)
+        rowsBuilder.logoRow(),
+        rowsBuilder.textFieldRow(title: .email) { _ in },
+        rowsBuilder.textFieldRow(title: .password) { _ in },
+        rowsBuilder.buttonRow(title: .register, appearance: .blue) { }
     ]
     
     init(auth: Auth) {
