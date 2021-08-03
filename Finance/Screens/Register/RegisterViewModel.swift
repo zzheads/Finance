@@ -12,11 +12,16 @@ final class RegisterViewModel: BaseViewModel {
     private let rowsBuilder: RowsBuilder
     private let auth: Auth
     
+    private var email: String?
+    private var password: String?
+    private var confirmPassword: String?
+    
     lazy var rows: [ConfigurableRow] = rowsBuilder.build(
         .logo,
-        .textField(.email, nil, nil),
-        .textField(.password, nil, nil),
-        .button(.register, .green, nil)
+        .textField(.email, email, false, { [weak self] in self?.email = $0 }),
+        .textField(.password, password, false, { [weak self] in self?.password = $0 }),
+        .textField(.confirmPassword, confirmPassword, false, { [weak self] in self?.confirmPassword = $0}),
+        .button(.register, .green, { [weak self] in self?.didPressRegister() })
     )
     
     init(auth: Auth, builder: RowsBuilder) {
@@ -36,5 +41,22 @@ final class RegisterViewModel: BaseViewModel {
     
     private func authStateListener(auth: Auth, user: User?) {
         
+    }
+    
+    private func didPressRegister() {
+        guard
+            let email = email,
+            let password = password,
+            let confirmPassword = confirmPassword,
+            password == confirmPassword
+        else { return }
+        auth.createUser(
+            withEmail: email,
+            password: password) { result, error in
+            guard let result = result, error == nil else {
+                print(error)
+                return
+            }
+        }
     }
 }

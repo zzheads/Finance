@@ -53,6 +53,7 @@ extension TextField {
         var font: UIFont = Constants.font
         var textColor: UIColor = Constants.textColor
         var isSecureTextEntry: Bool = false
+        var keyboardType: UIKeyboardType = .default
         var handler: ((String?) -> Void)?
     }
     

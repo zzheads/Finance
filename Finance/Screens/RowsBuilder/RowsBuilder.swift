@@ -10,33 +10,11 @@ import UIKit
 enum RowType {
     case logo
     case button(DefaultRowsBuilder.Title, UIButton.Appearance, (() -> Void)?)
-    case textField(DefaultRowsBuilder.Title, String?, ((String?) -> Void)?)
+    case textField(DefaultRowsBuilder.Title, String?, Bool, ((String?) -> Void)?)
 }
 
 protocol RowsBuilder: AnyObject {
     func build(_ rows: RowType...) -> [ConfigurableRow]
-    
-    func logoRow() -> ImageRow
-    
-    func buttonRow(
-        title: DefaultRowsBuilder.Title,
-        appearance: UIButton.Appearance,
-        handler: (() -> Void)?) -> ButtonRow
-    
-    func textFieldRow(
-        title: DefaultRowsBuilder.Title,
-        initialValue: String?,
-        handler: ((String?) -> Void)?) -> TextFieldRow
-    
-    func textFieldRow(
-        title: DefaultRowsBuilder.Title,
-        handler: ((String?) -> Void)?) -> TextFieldRow
-}
-
-extension RowsBuilder {
-    func textFieldRow(title: DefaultRowsBuilder.Title, handler: ((String?) -> Void)?) -> TextFieldRow {
-        textFieldRow(title: title, initialValue: nil, handler: handler)
-    }
 }
 
 final class DefaultRowsBuilder {
@@ -45,13 +23,7 @@ final class DefaultRowsBuilder {
         case password = "Password"
         case register = "Register"
         case rememberMe = "Remember me"
-        
-        var isSecureInput: Bool {
-            switch self {
-            case .password: return true
-            default: return false
-            }
-        }
+        case confirmPassword = "Confirm password"
     }
     
     struct Appearance {
@@ -107,10 +79,11 @@ extension DefaultRowsBuilder: RowsBuilder {
                     appearance: appearance,
                     handler: handler
                 )
-            case let .textField(title, value, handler):
+            case let .textField(title, value, isSecure, handler):
                 newRow = textFieldRow(
                     title: title,
                     initialValue: value,
+                    isSecureInput: isSecure,
                     handler: handler
                 )
             }
@@ -119,7 +92,7 @@ extension DefaultRowsBuilder: RowsBuilder {
         return result
     }
     
-    func logoRow() -> ImageRow {
+    private func logoRow() -> ImageRow {
         return ImageRow(
             ImageCell.Model(
                 height: appearance.logoHeight,
@@ -129,7 +102,7 @@ extension DefaultRowsBuilder: RowsBuilder {
         )
     }
     
-    func buttonRow(
+    private func buttonRow(
         title: Title,
         appearance: UIButton.Appearance,
         handler: (() -> Void)?) -> ButtonRow
@@ -148,17 +121,25 @@ extension DefaultRowsBuilder: RowsBuilder {
         )
     }
     
-    func textFieldRow(
+    private func textFieldRow(
         title: Title,
         initialValue: String? = nil,
+        isSecureInput: Bool,
         handler: ((String?) -> Void)?) -> TextFieldRow
     {
+        let type: UIKeyboardType
+        switch title {
+        case .email: type = .emailAddress
+        default: type = .default
+        }
+        
         let textFieldModel = TextField.Model(
             initialValue: initialValue,
             placeholder: title.rawValue,
             font: appearance.textFont,
             textColor: appearance.textColor,
-            isSecureTextEntry: title.isSecureInput,
+            isSecureTextEntry: isSecureInput,
+            keyboardType: type,
             handler: handler
         )
         
